@@ -54,7 +54,7 @@ const countDown = () => {
 const startStop = () => {
   // start condition
   if (timeStatus === "stopped") {
-    timerInterval = window.setInterval(countDown, 1);
+    timerInterval = window.setInterval(countDown, 1000);
     startStopBtn.innerHTML = `Pause`;
     startStopBtn.removeAttribute("id", "start-pause");
     startStopBtn.setAttribute("id", "pause-btn");
