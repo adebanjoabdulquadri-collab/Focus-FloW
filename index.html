@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Flow — Study Session Planner</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a class="focus-flow"><span class="flow-icon">◷</span> focus flow</a>
+      <span class="nav-note">MAKE SPACE TO FOCUS</span>
+    </header>
+    <section class="main-header">
+      <p class="pre-main-heading">YOUR PERSONAL FOCUS SPACE</p>
+      <h1 class="main-heading">
+        One thing at a time <span class="dotted">.</span>
+      </h1>
+      <h4>Small, focused sessions. Meaningful progress.</h4>
+    </section>
+
+    <section class="main-timer-container">
+      <div class="set-timer-main">
+        <div class="select-mode">
+          <button class="mode-1 active" type="button">Focus</button>
+          <button class="mode-2" type="button">Short break</button>
+          <button class="mode" type="button">Long break</button>
+        </div>
+        <div class="time">
+          <div class="current-time">
+            <p class="timer-mode-label" id="timer-mode-label">TIME TO FOCUS</p>
+            <p id="time">25:00</p>
+            <p class="timer-hint" id="timer-hint">One thing at a time</p>
+          </div>
+        </div>
+        <div class="timer-controls">
+          <button class="start-button" id="start-pause" type="button">
+            ▶ Start focus
+          </button>
+          <button class="reset-button" id="reset" type="button">↺</button>
+        </div>
+        <p class="status-message" id="status-message">
+          Choose a task, then start your session.
+        </p>
+      </div>
+      <div class="task">
+        <div class="task-heading">
+          <div>
+            <p class="stay-on-track">STAY ON TRACK</p>
+            <h2>Today's focus</h2>
+          </div>
+          <span class="task-count" id="task-count">0 tasks</span>
+        </div>
+        <form id="task-form" class="task-form">
+          <label class="sr-only" for="task-input">Add a task</label>
+          <input
+            id="task-input"
+            type="text"
+            placeholder="What do you want to work on?"
+          />
+          <button type="submit">+</button>
+        </form>
+        <ul class="task-list" id="task-list"></ul>
+        <div class="session-summary">
+          <div class="summary-icon">✦</div>
+          <div>
+            <p class="summary-title">
+              <span id="sessions-complete">0</span> focus sessions completed
+            </p>
+            <p class="summary-copy">Progress comes from showing up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <span>FOCUS WITH INTENTION</span><span>Work · Rest · Repeat</span>
+    </footer>
+  </body>
+</html>
